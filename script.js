@@ -1809,6 +1809,10 @@ function updateScore() {
   scoreValueEl.textContent = correctGuesses;
   streakValueEl.textContent = streak;
   
+  if (gameMode === "perfect10") {
+    livesValueEl.textContent = lives;
+  }
+  
   if (streak > 0) {
     streakPillEl.style.display = "flex";
     if (streak >= 5) {
@@ -1972,6 +1976,11 @@ function handleGuess(isRealGuess) {
       ? "❌ Not quite. This is actually a real startup."
       : "❌ Not quite. This one is fake — we invented it.";
     resultEl.className = "result incorrect";
+    
+    // Show lives remaining in perfect10 mode
+    if (gameMode === "perfect10" && lives > 0) {
+      resultEl.textContent += ` ❤️ ${lives} ${lives === 1 ? 'life' : 'lives'} remaining`;
+    }
   }
 
   // Reveal logo color
