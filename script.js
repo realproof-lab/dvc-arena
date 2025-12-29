@@ -1562,6 +1562,7 @@ let correctGuesses = 0;
 let round = 0;
 let streak = 0;
 let bestStreak = 0;
+let lives = 3;
 let gameMode = "endless";
 let timer = 60;
 let timerInterval = null;
@@ -1582,6 +1583,8 @@ const streakValueEl = document.getElementById("streak-value");
 const streakPillEl = document.getElementById("streak-pill");
 const timerValueEl = document.getElementById("timer-value");
 const timerPillEl = document.getElementById("timer-pill");
+const livesValueEl = document.getElementById("lives-value");
+const livesPillEl = document.getElementById("lives-pill");
 const progressBarEl = document.getElementById("progress-bar");
 const realBtn = document.getElementById("real-btn");
 const fakeBtn = document.getElementById("fake-btn");
@@ -1924,13 +1927,18 @@ function handleGuess(isRealGuess) {
     }
   } else {
     streak = 0;
-    // In perfect10 mode, game ends on first mistake
+    // In perfect10 mode, lose a life instead of ending immediately
     if (gameMode === "perfect10") {
+      lives -= 1;
       updateScore();
-      setTimeout(() => {
-        endGame();
-      }, 1500);
-      return;
+      
+      // Game ends when lives reach 0
+      if (lives <= 0) {
+        setTimeout(() => {
+          endGame();
+        }, 1500);
+        return;
+      }
     }
   }
 
@@ -2009,6 +2017,7 @@ function resetGame() {
   round = 0;
   streak = 0;
   bestStreak = 0;
+  lives = 3;
   usedIndices.clear();
   timer = 60;
   timerValueEl.textContent = timer;
@@ -2019,6 +2028,11 @@ function resetGame() {
 
   if (gameMode === "timed") {
     startTimer();
+  }
+
+  if (gameMode === "perfect10") {
+    livesPillEl.style.display = "flex";
+    lives = 3;
   }
 
   pickRandomStartup();
