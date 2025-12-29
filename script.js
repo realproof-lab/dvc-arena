@@ -1397,6 +1397,161 @@ const startups = [
     description: "Enterprise integration platform connecting SaaS tools and automating data flow.",
     real: false,
   },
+  {
+    name: "StreamCore AI",
+    description: "Real-time event streaming platform for building event-driven applications at scale.",
+    real: false,
+  },
+  {
+    name: "DataForge Pro",
+    description: "Advanced ETL platform that transforms and migrates data between systems seamlessly.",
+    real: false,
+  },
+  {
+    name: "CloudBridge Pro",
+    description: "Multi-cloud networking platform that connects workloads across different cloud providers.",
+    real: false,
+  },
+  {
+    name: "FlowSync AI",
+    description: "Intelligent document collaboration platform with real-time synchronization and version control.",
+    real: false,
+  },
+  {
+    name: "NexusGrid Pro",
+    description: "Enterprise grid computing platform for distributed data processing and analytics.",
+    real: false,
+  },
+  {
+    name: "DataPulse AI",
+    description: "Real-time data monitoring platform that alerts teams to anomalies and performance issues.",
+    real: false,
+  },
+  {
+    name: "CloudVault Pro",
+    description: "Enterprise cloud storage platform with advanced encryption and compliance features.",
+    real: false,
+  },
+  {
+    name: "FlowPath Pro",
+    description: "Customer journey analytics platform that maps user interactions across touchpoints.",
+    real: false,
+  },
+  {
+    name: "NexusFlow AI",
+    description: "AI-powered workflow optimization platform that suggests improvements to business processes.",
+    real: false,
+  },
+  {
+    name: "DataStream Pro",
+    description: "High-performance streaming analytics platform for processing millions of events per second.",
+    real: false,
+  },
+  {
+    name: "CloudScale Pro",
+    description: "Auto-scaling infrastructure platform that adjusts resources based on demand automatically.",
+    real: false,
+  },
+  {
+    name: "FlowBase Pro",
+    description: "Collaborative database platform designed for teams working with real-time data.",
+    real: false,
+  },
+  {
+    name: "NexusLink AI",
+    description: "AI-powered API gateway that intelligently routes and manages API requests.",
+    real: false,
+  },
+  {
+    name: "DataMesh Pro",
+    description: "Distributed data architecture platform for building scalable data products.",
+    real: false,
+  },
+  {
+    name: "CloudNet Pro",
+    description: "Enterprise network virtualization platform for managing cloud infrastructure.",
+    real: false,
+  },
+  {
+    name: "FlowTrack AI",
+    description: "AI-powered project management platform with predictive analytics and risk assessment.",
+    real: false,
+  },
+  {
+    name: "NexusHub Pro",
+    description: "Centralized collaboration hub that integrates all team communication and project tools.",
+    real: false,
+  },
+  {
+    name: "DataLens Pro",
+    description: "Advanced business intelligence platform that creates interactive dashboards from multiple sources.",
+    real: false,
+  },
+  {
+    name: "CloudForge Pro",
+    description: "Infrastructure as code platform for automating cloud resource deployment and management.",
+    real: false,
+  },
+  {
+    name: "FlowEngine Pro",
+    description: "Enterprise workflow automation platform for orchestrating complex business processes.",
+    real: false,
+  },
+  {
+    name: "NexusAI Pro",
+    description: "Enterprise AI platform that helps teams build and deploy custom machine learning models.",
+    real: false,
+  },
+  {
+    name: "DataVault AI",
+    description: "AI-powered data governance platform that ensures data quality and compliance.",
+    real: false,
+  },
+  {
+    name: "CloudSync AI",
+    description: "Intelligent file synchronization service that learns user patterns and optimizes sync performance.",
+    real: false,
+  },
+  {
+    name: "FlowMetrics AI",
+    description: "AI-powered analytics platform that provides insights into team productivity and efficiency.",
+    real: false,
+  },
+  {
+    name: "NexusCore Pro",
+    description: "Core platform for building and deploying microservices-based applications at scale.",
+    real: false,
+  },
+  {
+    name: "DataGrid AI",
+    description: "AI-powered data visualization platform that automatically generates insights from datasets.",
+    real: false,
+  },
+  {
+    name: "CloudMesh AI",
+    description: "AI-powered edge computing platform that optimizes workload distribution across devices.",
+    real: false,
+  },
+  {
+    name: "FlowWave Pro",
+    description: "Advanced real-time collaboration platform with built-in video conferencing and screen sharing.",
+    real: false,
+  },
+  {
+    name: "NexusSphere Pro",
+    description: "Enterprise platform that unifies all business applications into a single integrated workspace.",
+    real: false,
+  },
+  {
+    name: "DataPipe AI",
+    description: "AI-powered data pipeline platform that automatically optimizes ETL processes for performance.",
+    real: false,
+  },
+  {
+    name: "CloudBridge AI",
+    description: "Intelligent multi-cloud management platform that optimizes costs and performance across providers.",
+    real: false,
+  },
 ];
 
 // Game state
