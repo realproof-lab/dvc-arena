@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DVC Arena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="app-header">
+        <span class="header-icon">🚀</span>
+        <span>DVC Arena</span>
+      </div>
+      <p class="tagline">Can you tell real startups from AI-generated fakes?</p>
+
+      <div class="game-modes">
+        <button class="mode-btn active" data-mode="endless">Endless</button>
+        <button class="mode-btn" data-mode="timed">Timed (60s)</button>
+        <button class="mode-btn" data-mode="challenge">Challenge (10)</button>
+        <button class="mode-btn" data-mode="perfect10">Perfect 10</button>
+      </div>
+
+      <div class="card" id="game-card">
+        <div class="card-stats">
+          <div class="stat-pill">
+            <span class="stat-label">Round</span>
+            <span id="round-value" class="stat-value">1</span>
+          </div>
+          <div class="stat-pill streak-pill" id="streak-pill">
+            <span class="stat-label">🔥 Streak</span>
+            <span id="streak-value" class="stat-value">0</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-label">Score</span>
+            <span id="score-value" class="stat-value">0</span>
+          </div>
+          <div class="stat-pill" id="timer-pill" style="display: none;">
+            <span class="stat-label">⏱️ Time</span>
+            <span id="timer-value" class="stat-value">60</span>
+          </div>
+        </div>
+
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="startup-header">
+          <div id="startup-logo" class="startup-logo">
+            <img id="startup-logo-img" class="startup-logo-img" style="display: none;" alt="Logo" />
+            <span id="startup-logo-text" class="startup-logo-text"></span>
+          </div>
+          <div class="startup-text">
+            <div id="startup-name" class="startup-name hidden">Loading...</div>
+            <div id="startup-description" class="startup-description"></div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="real-btn" class="action-btn">
+            <span class="btn-icon">✓</span>
+            <span>Real</span>
+            <span class="btn-hint">(R)</span>
+          </button>
+          <button id="fake-btn" class="action-btn">
+            <span class="btn-icon">✗</span>
+            <span>Fake</span>
+            <span class="btn-hint">(F)</span>
+          </button>
+        </div>
+        <div id="result" class="result"></div>
+      </div>
+
+      <div class="game-over" id="game-over" style="display: none;">
+        <div class="game-over-content">
+          <h2 id="game-over-title">Game Over!</h2>
+          <div class="final-stats">
+            <div class="final-stat">
+              <span class="final-stat-label">Final Score</span>
+              <span class="final-stat-value" id="final-score">0</span>
+            </div>
+            <div class="final-stat">
+              <span class="final-stat-label">Best Streak</span>
+              <span class="final-stat-value" id="final-streak">0</span>
+            </div>
+            <div class="final-stat">
+              <span class="final-stat-label">Accuracy</span>
+              <span class="final-stat-value" id="final-accuracy">0%</span>
+            </div>
+          </div>
+          <button class="restart-btn" id="restart-btn">Play Again</button>
+        </div>
+      </div>
+
+      <div class="leaderboard" id="leaderboard">
+        <div class="leaderboard-header">🏆 Best Scores</div>
+        <div class="leaderboard-list" id="leaderboard-list"></div>
+      </div>
+    </div>
+    <div id="floating-emoji-container"></div>
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
